@@ -50,7 +50,7 @@ window.onscroll=()=>{
                 bootstrap.style.width="80%"
                 sass.style.width="90%";
                 react.style.width="60%";
-            }else if(value<=80){
+            }else if(value<=1100){
                 html.style.width= "0%";
                 css.style.width= "0%";
                 javascript.style.width="0%"
