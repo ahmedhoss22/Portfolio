@@ -1,0 +1,77 @@
+@use  "../mixin" as *;
+@use "./portfolio-media" as *;
+
+@include sectionAnimation;
+@include controls;
+@include layout;
+@include main-title;
+@include theme-btn;
+.sec3{
+    padding: 4rem 10rem;
+    .main-title p{
+        margin-top: 5rem;
+    }
+    .portfolio-content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 2rem;      
+        margin: 4rem 0;  
+        .portfolio-card{    
+            border: 2px solid var(--color-secondary);
+            border-radius: 40px;
+            position: relative;
+          
+            .portfolio-info{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: var(--color-secondary);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: scale(0);
+                transition: .5s;
+                top: 0;
+                left: 0;
+                border-radius: 40px;
+                flex-direction: column;
+                    p{
+                                font-size: 2rem;
+                                font-weight: 700;
+                            }
+                .icons{
+                    display: flex;
+                    justify-content: space-evenly;
+                            a{
+                                font-size: 2.5rem;
+                                margin: 0 20px;
+                               
+                                i{
+                                    background-color: black;
+                                    color: #ffff;
+                                    border-radius: 50%;
+                                    transition: .5s;
+                                    &:hover{
+                                        background-color:#ffff ;
+                                        color: black;
+                                    }
+                                }
+                            }
+                         
+                        }
+            }
+            &:hover  .portfolio-info{
+                transform: scale(1)
+            }
+       }
+        .portfolio-card img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 40px;
+
+                }
+    }
+}
+
+@include media;

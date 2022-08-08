@@ -1,0 +1,94 @@
+@mixin media {
+
+    @media screen and (max-width: 600px){
+       .header-content{
+        grid-template-columns: repeat(1,1fr);
+        .left-header{
+            grid-row: 2;
+            height: 67vh;
+            .img{
+                width: 100%  !important;
+                margin-left: 1rem !important;
+            }
+        }
+        .right-header{
+            padding: 2rem !important;
+            h1{
+                font-size: 1.5rem !important;
+            }
+            p{
+                font-size: .75rem !important;
+    
+            }
+        }}
+        .theme-btn{
+            top: 3%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: .5rem;
+            i{
+                font-size: 1;
+                color: var(--color-grey-2);
+               }
+        }
+    }
+    @media screen and (min-width: 601px) and (max-width: 767px){
+        .left-header{
+            .img{
+                margin-left: 1rem !important;
+                width: 100%  !important;
+                height: 70% !important;
+            }
+        }
+        .right-header{
+            padding: 1rem !important;
+            h1{
+                font-size: 1.75rem !important;
+            }
+            p{
+                font-size: 1.2rem !important;
+    
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1000px){
+        .left-header{
+            .img{
+                margin-left: 1rem !important;
+                width: 100%  !important;
+                height: 90% !important;
+            }
+        }
+        .right-header{
+            padding-right: 5rem !important;
+            h1{
+                font-size: 2.1rem !important;
+            }
+            p{
+                font-size: 1.5rem !important;
+    
+            }
+        }
+    }
+    @media screen and (min-width: 1000px) and (max-width: 1200px){
+        .left-header{
+            padding-left: 3rem !important;
+            .img{
+                margin-left: 1rem !important;
+                width: 100%  !important;
+                height: 90% !important;
+            }
+        }
+        .right-header{
+            padding-right: 6rem !important;
+            h1{
+                font-size: 2.5rem !important;
+            }
+            p{
+                font-size: 1.5rem !important;
+    
+            }
+        }}
+    
+}
