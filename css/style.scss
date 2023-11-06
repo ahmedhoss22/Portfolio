@@ -1,0 +1,78 @@
+// import mixin
+@use './sass/mixin' as *;
+@use './sass/style-media' as *;
+
+
+
+@include layout;
+@include sectionAnimation;
+@include controls;
+ /* header content*/
+ .header-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+        .left-header{
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 100vh;
+
+                .header-shape{
+                    position: absolute;
+                    transition: all .4s ease-in-out;
+                    background-color: var(--color-secondary);
+                    width: 65%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                    z-index: -1;
+                    clip-path: polygon(0 0, 49% 0, 83% 100%, 0% 100%);                }
+                    .img{
+                        border-radius: var(--br-sm-2);
+                        height: 90%;
+                        width: 90%;
+                        margin-left: 4rem;
+                        transition: all .4s ease-in-out;
+                        }
+                               img{
+                                object-fit: cover;
+                                transition: all .4s ease-in-out;
+                                filter: grayscale(100%);
+                                height :"100%";
+                                width: "90%";
+                                border-radius: 50px;
+                                    &:hover , &:focus{
+                                        filter: grayscale(0%);
+
+                                    }
+                                }
+            }
+
+        .right-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 14rem;
+                .name{
+                    font-size: 3rem;
+                    span{
+                        color: var(--color-secondary);
+                    }
+                }
+                p{
+                    margin: 1.5rem 0;
+                    line-height: 2rem;
+                    font-size: inherit;
+                }
+        
+        
+        }
+ }
+
+
+
+ /* Independent content*/
+ @include download-cv;
+@include theme-btn;
+@include media;
